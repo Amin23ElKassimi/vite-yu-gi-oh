@@ -1,18 +1,14 @@
 <template lang="">
-    <div></div>
+    <CardList/>
 </template>
 
-<script>
-import { store } from '../js/store.js';
 
+<script>
+import CardList from './CardList.vue';
 export default {
-    data() {
-        return {
-            store,
-        }
-    },
+    CardList,
 }
 </script>
 <style lang="scss">
-
+    
 </style>

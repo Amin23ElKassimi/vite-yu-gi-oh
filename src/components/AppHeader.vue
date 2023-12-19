@@ -1,20 +1,29 @@
 <template lang="">
-    <header class="mb-5">
-        <!-- navbar -->
-        <nav class="navbar bg-dark text-dark bg-body-tertiary border-bottom border-body p-2" data-bs-theme="dark">
-            <div class="container text-center" >
-                <span class="navbar-brand mb-0 h1 fs-2 w-100">Rick & morty - Vue 3 + Vite + Axios</span>
-            </div>
+    <header>
+        <nav class="d-flex p-3 bg-body-tertiary">
+            <img src="../assets/img/Logo.jpg" alt="">
+            <h1>Yu-Gi-Oh API</h1>
         </nav>
     </header>
 </template>
-
 <script>
 export default {
 
+
+
+
+    data() {
+        return {
+            
+        }
+    },
+    
 }
 </script>
-
 <style lang="scss">
 
+    img{
+        height: 40px;
+    }
+    
 </style>
