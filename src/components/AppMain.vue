@@ -8,14 +8,12 @@
 <!-- JavaScript -->
 <script>
 
+// Importa Componente
 import CardList from './CardList.vue';
 
-
+// 
 export default {
-
-
-
-
+    //Dichiara Componente 
     components :{
     CardList,
     },
@@ -27,6 +25,8 @@ export default {
 
 <!-- SCSS -->
 <style lang="scss">
+
+// Use 
 @use '../styles/partials/variables.scss' as *;
     
     main {

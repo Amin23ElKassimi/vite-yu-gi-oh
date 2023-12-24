@@ -1,3 +1,4 @@
+<!-- HTML -->
 <template lang="">
     <article class="p-0 text-uppercase fw-bold">
         <section class="image">
@@ -12,7 +13,7 @@
     </article>
 </template>
 
-
+<!-- JavaScript -->
 <script>
 
 
@@ -32,7 +33,7 @@ export default {
 
 </script>
 
-
+<!--SASS-->
 <style lang="scss" scoped>
 @use '../styles/partials/variables.scss' as *;
 

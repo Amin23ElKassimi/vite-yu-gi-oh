@@ -14,13 +14,14 @@
     </section>
 </template>
 
-<!-- JAbaScript -->
+<!-- JAvaScript -->
 <script>
 import SingleCard from './SingleCard.vue';
 import axios from 'axios';
 
 export default {
 
+    // Variabili da Usare
     data() {
         return {
             cardList: [],
@@ -28,16 +29,16 @@ export default {
             
         }
     },
-
+    // DDichiarare i componenti importati
     components: {
         SingleCard,
         
 
     },
-
-
+    // Dove Scrivere le Funzioni
     methods: {
-
+        
+        // Metodo Axios
         getcards() {
             // Make a request for a user with a given ID
             axios.get(this.apiUrl)
@@ -53,7 +54,7 @@ export default {
         }       
     },
     
-
+    // Hook
     created() {
 
         this.getcards();
@@ -62,10 +63,8 @@ export default {
 
 }
 
-
-
-
 </script>
+
 
 <!-- SASS -->
 <style lang="scss">
