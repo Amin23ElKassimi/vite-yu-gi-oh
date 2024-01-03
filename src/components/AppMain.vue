@@ -1,6 +1,7 @@
 <!-- HTML -->
 <template lang="">
     <main>
+        <AppSearch/>
         <CardList/>
     </main>
 </template>
@@ -10,12 +11,14 @@
 
 // Importa Componente
 import CardList from './CardList.vue';
+import AppSearch from './AppSearch.vue';
 
 // 
 export default {
     //Dichiara Componente 
     components :{
     CardList,
+    AppSearch,
     },
 
 

@@ -35,6 +35,7 @@ export default {
         
 
     },
+    
     // Dove Scrivere le Funzioni
     methods: {
         
@@ -44,7 +45,7 @@ export default {
             axios.get(this.apiUrl)
                 .then( (response) => {
                     // handle success
-                    console.log(response);
+                
                     this.cardList = response.data.data
                 })
                 .catch(function (error) {
