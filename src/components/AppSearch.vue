@@ -1,25 +1,27 @@
 
-
+ <!-- HTML & VUEjs -->
 <template lang="">
     <div class="mb-3">
-        <!-- Inserire una Select -->
+        <!-- Select Archetype -->
         <select class="form-select" aria-label="Default select example" @change="selectArchetype(selectedArchetype)" v-model='selectedArchetype'>
-            <option selected>Open this select menu</option>
+            <!-- Popolazione delle Options -->
             <option v-for="(archetype , index) in archetypeList" :key="index" :value="archetype.archetype_name">
                 {{archetype.archetype_name}}
-            </option>  
+            </option>
+
         </select>
     </div>
 </template>
 
-
+<!-- JavaScript -->
 <script>
 
-import axios from 'axios';
-
+    // Importa Componente
+    import axios from 'axios';
 
     export default {
 
+        // Variabili da Usare
         data() {
             return {
                 archetypeList: [],
@@ -28,43 +30,40 @@ import axios from 'axios';
             }
         }, 
 
-// Dove Scrivere le Funzioni
-    methods: {
-        
-        // Metodo Axios
-        getArchetype() {
-            // Make a request for a user with a given ID
-            axios.get(this.apiUrl)
-                .then( (response) => {
-                    // handle success
-                    this.archetypeList = response.data
-                    // console.log(this.archetypeList)
-                })
-                .catch(function (error) {
-                    // handle error
-                    console.log(error);
-                });
+        // Dove Scrivere le Funzioni
+        methods: {
+            
+            // Metodo Axios
+            getArchetype() {
+                // Make a request for a user with a given ID
+                axios.get(this.apiUrl)
+                    .then( (response) => {
+                        // handle success
+                        this.archetypeList = response.data
+                        // console.log(this.archetypeList)
+                    })
+                    .catch(function (error) {
+                        // handle error
+                        console.log(error);
+                    });
+            },
+            
+            selectArchetype(archetype) {
+                this.$emit('filter', archetype )
+            },      
+
         },
-        
-        selectArchetype(archetype) {
-            this.$emit('filter', archetype )
-        },      
 
-     },
-
-// Richiamo delle funzioni in Vue
-     created() {
-         
-        this.getArchetype();
-         
-     },  
-        
+        // Richiamo delle funzioni in Vue
+        created() {
+            this.getArchetype();
+        },  
+            
     }      
 
 </script>
 
-
-
+<!-- SCSS -->
 <style lang="">
     
 </style>

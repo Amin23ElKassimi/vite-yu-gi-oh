@@ -1,4 +1,4 @@
- <!-- HTML -->
+ <!-- HTML & VUEjs -->
 <template lang="">
     <main>
         <AppSearch  @filter="getCards" />
@@ -14,8 +14,6 @@
     import CardList from './CardList.vue';
     import AppSearch from './AppSearch.vue';
     import axios from 'axios';
-
-
 
     export default {
 
@@ -47,7 +45,7 @@
                     .then( (response) => {
                         // handle success
                         this.cardListFiltred = response.data.data
-                        console.log(this.cardListFiltred)
+                        // console.log(this.cardListFiltred)
                     })
                     .catch(function (error) {
                         // handle error
@@ -56,12 +54,11 @@
             }         
         }, 
 
-        // Hook
+        // Hook 
         created() {
 
         this.getCards();
         }
-
 
     }
 
