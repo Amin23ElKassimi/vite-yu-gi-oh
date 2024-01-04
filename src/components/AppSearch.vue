@@ -25,7 +25,6 @@ import axios from 'axios';
                 archetypeList: [],
                 apiUrl: 'https://db.ygoprodeck.com/api/v7/archetypes.php',
                 selectedArchetype: '',
-
             }
         }, 
 
@@ -39,7 +38,7 @@ import axios from 'axios';
                 .then( (response) => {
                     // handle success
                     this.archetypeList = response.data
-                    console.log(this.archetypeList)
+                    // console.log(this.archetypeList)
                 })
                 .catch(function (error) {
                     // handle error
@@ -48,8 +47,7 @@ import axios from 'axios';
         },
         
         selectArchetype(archetype) {
-            console.log(archetype)
-            // this.$emit('filter', archetype )
+            this.$emit('filter', archetype )
         },      
 
      },
